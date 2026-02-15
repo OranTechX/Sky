@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 或是你的預設分支名稱
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9 # 或是你使用的版本
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Static HTML export
+        run: pnpm run generate # 確保你的 package.json 有 generate 指令
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .output/public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
