@@ -18,8 +18,10 @@ const emit = defineEmits<{ close: [boolean] }>();
 // 判斷是否為首頁的計算屬性
 // const isHomePage = computed(() => route.path === "/");
 const isHomePage = computed(() => {
-  return route.path === "/" || route.path === "/en" || route.path === "/en/";
-});
+  // 使用 .replace 移除結尾斜線，確保判斷精準
+  const path = route.path.replace(/\/$/, '')
+  return path === '' || path === '/en' || path === '/zh'
+})
 </script>
 
 <template>
