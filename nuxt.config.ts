@@ -3,12 +3,10 @@ export default defineNuxtConfig({
   // 必須設定為靜態生成
   ssr: true, // 或者 false，視需求而定，但部署到 GitHub Pages 通常建議產生靜態檔
 
-  // app: {
-    // 這裡的 baseURL 必須對應你的 GitHub 儲存庫名稱
-    // 例如儲存庫叫 "my-nuxt-project"，則填入 "/my-nuxt-project/"
-    // baseURL: '/你的儲存庫名稱/',
-    // buildAssetsDir: 'assets', // 避免 GitHub Pages 忽略以底線開頭的資料夾（如 _nuxt）
-  // },
+  app: {
+    baseURL: '/Sky/',
+    buildAssetsDir: 'assets', // 避免 GitHub Pages 忽略以底線開頭的資料夾（如 _nuxt）
+  },
 
   nitro: {
     // 確保預渲染 (Prerender) 正確運作
