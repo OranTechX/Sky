@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   ssr: true, // 或者 false，視需求而定，但部署到 GitHub Pages 通常建議產生靜態檔
 
   app: {
-    baseURL: '/Sky/',
+    baseURL: '/',
     buildAssetsDir: 'assets', // 避免 GitHub Pages 忽略以底線開頭的資料夾（如 _nuxt）
   },
 
