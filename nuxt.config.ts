@@ -24,13 +24,13 @@ export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxtjs/i18n'],
   i18n: {
     strategy: 'prefix_except_default',
-    defaultLocale: 'zh',
+    defaultLocale: 'en',
     langDir: '../i18n/locales', // 這裡已經說了在 i18n 資料夾下
     locales: [
       // 修正：直接寫檔名就好，不要寫成 'i18n/zh.json'
       { code: 'zh', iso: 'zh-TW', name: '中文', file: 'zh.json' },
       { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' }
     ],
-    lazy: true
+    lazy: true,
   }
 })

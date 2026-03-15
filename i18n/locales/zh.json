@@ -5,7 +5,9 @@
     "services": "服務資訊",
     "contact": "聯絡我們"
   },
-  "welcome": "歡迎來到 OranTechX",
+  "welcome1": "科技之芯",
+  "welcome2": "蘊藏陽光能量",
+  "footer":"OranTechX  橙耀科技",
   "servicesPage": {
     "title": "Services",
     "description": "Committed to providing top-tier technology solutions.",
@@ -23,5 +25,10 @@
         "value": "Analog Circuit, SerDes, DDRIO, RF, PLL, ADC, PMIC, LDO, SRAM, etc."
       }
     }
+  },
+  "aboutPage": {
+    "description_part1": "OranTechX（橙耀科技）是成立於矽谷以服務為導向的專業 IC Layout 公司，致力於協助客戶完成各項任務，時刻提供創新的想法，以最適合的方案滿足不同的設計，為您的產品贏得勝利。",
+    "mission": "Time to Market, Performance, Reliability and Commitment always be our mission.",
+    "description_part2": "從傳統製程到先進製程都在我們的服務範疇，尤其是在先進製程，專屬的客製化服務，透過我們的專業成就您的事業。"
   }
 }

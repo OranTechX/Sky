@@ -19,9 +19,9 @@ const emit = defineEmits<{ close: [boolean] }>();
 // const isHomePage = computed(() => route.path === "/");
 const isHomePage = computed(() => {
   // 使用 .replace 移除結尾斜線，確保判斷精準
-  const path = route.path.replace(/\/$/, '')
-  return path === '' || path === '/en' || path === '/zh'
-})
+  const path = route.path.replace(/\/$/, "");
+  return path === "" || path === "/en" || path === "/zh";
+});
 </script>
 
 <template>
@@ -39,7 +39,7 @@ const isHomePage = computed(() => {
       >
         <!-- logo -->
         <NuxtLinkLocale to="/" class="flex items-center">
-          <img src="./assets/img/logo.png" class="h-8 w-auto" alt="Logo" />
+          <img src="./assets/img/logo.png" class="h-10 w-auto" alt="Logo" />
         </NuxtLinkLocale>
         <!--  選單 -->
         <div class="flex items-center gap-4">
@@ -84,15 +84,30 @@ const isHomePage = computed(() => {
         >
           <!-- 漢堡 -->
           <UButton
-            icon="i-heroicons-bars-3"
             color="gray"
             variant="ghost"
-            class="lg:hidden"
+            class="flex items-center justify-center lg:hidden w-10"
             @click="isOpen = true"
-          />
+          >
+            <UIcon name="i-heroicons-bars-3" class="w-7 h-7 text-gray-700" />
+          </UButton>
           <template #body="{ close }">
-            <div class="p-6 flex flex-col h-full bg-white justify-between">
+            <div
+              class="p-6 flex flex-col h-screen w-full absolute top-0 left-0 bg-white justify-between"
+            >
               <nav class="flex flex-col gap-6">
+                <!-- 關閉 -->
+                <UButton
+                  color="gray"
+                  variant="ghost"
+                  class="h-7 flex justify-end"
+                  @click="close"
+                >
+                  <UIcon
+                    name="i-heroicons-x-mark-20-solid"
+                    class="w-8 h-8 text-gray-700"
+                  />
+                </UButton>
                 <NuxtLinkLocale
                   v-for="item in navItems"
                   :key="item.to"
@@ -109,7 +124,12 @@ const isHomePage = computed(() => {
                 <button
                   v-for="lang in (['zh', 'en'] as const)"
                   :key="lang"
-                  @click="setLocale(lang)"
+                  @click="
+                    () => {
+                      setLocale(lang); // 1. 切換語系
+                      close(); // 2. 關閉選單
+                    }
+                  "
                   class="px-5 h-8 w-full flex items-center justify-center font-bold rounded-full transition-all"
                   :class="
                     locale === lang
@@ -135,8 +155,7 @@ const isHomePage = computed(() => {
     <footer
       class="min-h-10 flex items-center justify-center w-full text-black text-sm py-3 bg-white/40"
     >
-      OranTechX
-      <span class="ml-4">橙耀科技</span>
+      {{ $t("footer") }}
     </footer>
   </div>
 </template>

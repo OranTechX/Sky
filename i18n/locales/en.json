@@ -5,7 +5,9 @@
     "services": "Services",
     "contact": "Contact"
   },
-  "welcome": "Welcome to OranTechX",
+  "welcome1": "Core Technology.",
+  "welcome2": "Radiant Energy.",
+  "footer":"OranTechX",
   "servicesPage": {
     "title": "Services",
     "description": "Committed to providing top-tier technology solutions.",
@@ -23,5 +25,9 @@
         "value": "Analog Circuit, SerDes, DDRIO, RF, PLL, ADC, PMIC, LDO, SRAM, etc."
       }
     }
+  },
+  "aboutPage": {
+    "description_part1": "OranTechX is a Silicon Valley–based, service-oriented professional IC layout company.We are dedicated to supporting our clients in accomplishing their goals by consistently delivering innovative ideas and tailored solutions that best meet diverse design requirements — empowering your products to succeed in the market.",
+    "mission": "Time to Market, Performance, Reliability and Commitment always be our mission."
   }
 }
