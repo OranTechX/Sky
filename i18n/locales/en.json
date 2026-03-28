@@ -13,21 +13,36 @@
     "description": "Committed to providing top-tier technology solutions.",
     "items": {
       "service_type": {
-        "label": "服務項目",
+        "label": "Service Type",
         "value": "IC Layout Service"
       },
       "process": {
-        "label": "製程",
+        "label": "Process",
         "value": "2nm, 3nm, 5nm, 7nm, etc."
       },
       "products": {
-        "label": "產品",
+        "label": "Products",
         "value": "Analog Circuit, SerDes, DDRIO, RF, PLL, ADC, PMIC, LDO, SRAM, etc."
       }
     }
   },
   "aboutPage": {
     "description_part1": "OranTechX is a Silicon Valley–based, service-oriented professional IC layout company.We are dedicated to supporting our clients in accomplishing their goals by consistently delivering innovative ideas and tailored solutions that best meet diverse design requirements — empowering your products to succeed in the market.",
-    "mission": "Time to Market, Performance, Reliability and Commitment always be our mission."
+    "mission": "Time to Market, Performance, Reliability and Commitment always be our mission.",
+    "companyInfo": "Corporate Headquarters & ORANTECHX Taiwan Co., Ltd."
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "description1": "Whether you have specific project requirements or wish to learn more about our technical expertise, we are ready to support you.",
+    "description2": "Please fill out the form below, and we will get back to you as soon as possible.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your Name",
+      "email": "Email",
+      "emailPlaceholder": "example{'@'}mail.com",
+      "message": "Message",
+      "messagePlaceholder": "Briefly describe your requirements or inquiries...",
+      "submit": "Submit"
+    }
   }
 }

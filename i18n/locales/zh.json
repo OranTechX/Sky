@@ -29,6 +29,21 @@
   "aboutPage": {
     "description_part1": "OranTechX（橙耀科技）是成立於矽谷以服務為導向的專業 IC Layout 公司，致力於協助客戶完成各項任務，時刻提供創新的想法，以最適合的方案滿足不同的設計，為您的產品贏得勝利。",
     "mission": "Time to Market, Performance, Reliability and Commitment always be our mission.",
-    "description_part2": "從傳統製程到先進製程都在我們的服務範疇，尤其是在先進製程，專屬的客製化服務，透過我們的專業成就您的事業。"
+    "description_part2": "從傳統製程到先進製程都在我們的服務範疇，尤其是在先進製程，專屬的客製化服務，透過我們的專業成就您的事業。",
+    "companyInfo": "總部（矽谷）及台灣分公司（橙耀科技）"
+  },
+  "contactPage": {
+    "title": "聯絡我們",
+    "description1": "無論您是有具體的專案需求，還是想了解更多技術細節，我們都隨時準備好為您提供支援。",
+    "description2":"請填寫下方的表單，我們會將盡快與您聯繫。",
+    "form": {
+      "name": "姓名",
+      "namePlaceholder": "您的稱呼",
+      "email": "電子郵件",
+      "emailPlaceholder": "example{'@'}mail.comm",
+      "message": "說明",
+      "messagePlaceholder": "請簡述您的問題或需求...",
+      "submit": "確認送出"
+    }
   }
 }
